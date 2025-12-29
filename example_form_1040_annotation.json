@@ -1,0 +1,475 @@
+{
+  "form_metadata": {
+    "form_id": "IRS-1040",
+    "form_name": "U.S. Individual Income Tax Return",
+    "year": 2024,
+    "page_count": 2,
+    "page_size": {
+      "width": 612,
+      "height": 792,
+      "unit": "pt"
+    }
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "fields": [
+        {
+          "field_id": "first_name",
+          "irs_line_reference": "Your first name and middle initial",
+          "field_type": "text",
+          "data_type": "string",
+          "position": {
+            "x": 45,
+            "y": 142,
+            "width": 180,
+            "height": 18,
+            "unit": "pt"
+          },
+          "style": {
+            "font_family": "Courier",
+            "font_size": 10,
+            "font_weight": "normal",
+            "text_align": "left",
+            "vertical_align": "center",
+            "color": "#000000"
+          },
+          "validation": {
+            "required": true,
+            "pattern": "^[A-Za-z\\s\\-\\']+$",
+            "max_length": 30
+          },
+          "field_value": "taxpayer.first_name"
+        },
+        {
+          "field_id": "last_name",
+          "irs_line_reference": "Last name",
+          "field_type": "text",
+          "data_type": "string",
+          "position": {
+            "x": 230,
+            "y": 142,
+            "width": 200,
+            "height": 18,
+            "unit": "pt"
+          },
+          "style": {
+            "font_family": "Courier",
+            "font_size": 10,
+            "text_align": "left"
+          },
+          "validation": {
+            "required": true
+          },
+          "field_value": "taxpayer.last_name"
+        },
+        {
+          "field_id": "ssn",
+          "irs_line_reference": "Your social security number",
+          "field_type": "segmented",
+          "data_type": "string",
+          "segments": [
+            {
+              "position": { "x": 480, "y": 142, "width": 30, "height": 18, "unit": "pt" },
+              "length": 3
+            },
+            {
+              "position": { "x": 515, "y": 142, "width": 25, "height": 18, "unit": "pt" },
+              "length": 2
+            },
+            {
+              "position": { "x": 545, "y": 142, "width": 40, "height": 18, "unit": "pt" },
+              "length": 4
+            }
+          ],
+          "style": {
+            "font_family": "Courier",
+            "font_size": 10,
+            "text_align": "center"
+          },
+          "validation": {
+            "required": true,
+            "pattern": "^\\d{3}-?\\d{2}-?\\d{4}$"
+          },
+          "field_value": "taxpayer.ssn"
+        },
+        {
+          "field_id": "home_address",
+          "irs_line_reference": "Home address (number and street)",
+          "field_type": "text",
+          "data_type": "string",
+          "position": {
+            "x": 45,
+            "y": 165,
+            "width": 400,
+            "height": 18,
+            "unit": "pt"
+          },
+          "style": {
+            "font_family": "Courier",
+            "font_size": 10,
+            "text_align": "left"
+          },
+          "formatting": {
+            "text_transform": "uppercase"
+          },
+          "field_value": "taxpayer.address.street"
+        },
+        {
+          "field_id": "city",
+          "irs_line_reference": "City, town, or post office",
+          "field_type": "text",
+          "data_type": "string",
+          "position": {
+            "x": 45,
+            "y": 188,
+            "width": 250,
+            "height": 18,
+            "unit": "pt"
+          },
+          "field_value": "taxpayer.address.city"
+        },
+        {
+          "field_id": "state",
+          "irs_line_reference": "State",
+          "field_type": "text",
+          "data_type": "string",
+          "position": {
+            "x": 300,
+            "y": 188,
+            "width": 30,
+            "height": 18,
+            "unit": "pt"
+          },
+          "formatting": {
+            "text_transform": "uppercase"
+          },
+          "validation": {
+            "max_length": 2
+          },
+          "field_value": "taxpayer.address.state"
+        },
+        {
+          "field_id": "zip_code",
+          "irs_line_reference": "ZIP code",
+          "field_type": "text",
+          "data_type": "string",
+          "position": {
+            "x": 340,
+            "y": 188,
+            "width": 80,
+            "height": 18,
+            "unit": "pt"
+          },
+          "validation": {
+            "max_length": 10
+          },
+          "field_value": "taxpayer.address.zip_code"
+        },
+        {
+          "field_id": "filing_status_single",
+          "irs_line_reference": "Filing Status - Single",
+          "field_type": "checkbox",
+          "data_type": "boolean",
+          "position": {
+            "x": 55,
+            "y": 220,
+            "width": 12,
+            "height": 12,
+            "unit": "pt"
+          },
+          "check_style": {
+            "mark_type": "X",
+            "mark_size": 10,
+            "mark_weight": "bold"
+          },
+          "group_id": "filing_status",
+          "field_value": "filing_status.single"
+        },
+        {
+          "field_id": "filing_status_married_joint",
+          "irs_line_reference": "Filing Status - Married filing jointly",
+          "field_type": "checkbox",
+          "data_type": "boolean",
+          "position": {
+            "x": 55,
+            "y": 232,
+            "width": 12,
+            "height": 12,
+            "unit": "pt"
+          },
+          "check_style": {
+            "mark_type": "X",
+            "mark_size": 10,
+            "mark_weight": "bold"
+          },
+          "group_id": "filing_status",
+          "field_value": "filing_status.married_joint"
+        },
+        {
+          "field_id": "filing_status_married_separate",
+          "irs_line_reference": "Filing Status - Married filing separately",
+          "field_type": "checkbox",
+          "data_type": "boolean",
+          "position": {
+            "x": 55,
+            "y": 244,
+            "width": 12,
+            "height": 12,
+            "unit": "pt"
+          },
+          "check_style": {
+            "mark_type": "X",
+            "mark_size": 10,
+            "mark_weight": "bold"
+          },
+          "group_id": "filing_status",
+          "field_value": "filing_status.married_separate"
+        },
+        {
+          "field_id": "filing_status_head_household",
+          "irs_line_reference": "Filing Status - Head of household",
+          "field_type": "checkbox",
+          "data_type": "boolean",
+          "position": {
+            "x": 55,
+            "y": 256,
+            "width": 12,
+            "height": 12,
+            "unit": "pt"
+          },
+          "check_style": {
+            "mark_type": "X",
+            "mark_size": 10,
+            "mark_weight": "bold"
+          },
+          "group_id": "filing_status",
+          "field_value": "filing_status.head_of_household"
+        },
+        {
+          "field_id": "filing_status_widow",
+          "irs_line_reference": "Filing Status - Qualifying surviving spouse",
+          "field_type": "checkbox",
+          "data_type": "boolean",
+          "position": {
+            "x": 55,
+            "y": 268,
+            "width": 12,
+            "height": 12,
+            "unit": "pt"
+          },
+          "check_style": {
+            "mark_type": "X",
+            "mark_size": 10,
+            "mark_weight": "bold"
+          },
+          "group_id": "filing_status",
+          "field_value": "filing_status.widow"
+        },
+        {
+          "field_id": "wages_line1a",
+          "irs_line_reference": "Line 1a - Total amount from Form(s) W-2, box 1",
+          "field_type": "currency",
+          "data_type": "decimal",
+          "position": {
+            "x": 480,
+            "y": 320,
+            "width": 100,
+            "height": 18,
+            "unit": "pt"
+          },
+          "style": {
+            "font_family": "Courier",
+            "font_size": 10,
+            "text_align": "right",
+            "vertical_align": "center"
+          },
+          "formatting": {
+            "decimal_places": 2,
+            "show_commas": true,
+            "negative_format": "parentheses"
+          },
+          "validation": {
+            "min": 0,
+            "max": 999999999.99
+          },
+          "field_value": "income.wages"
+        },
+        {
+          "field_id": "interest_line2b",
+          "irs_line_reference": "Line 2b - Taxable interest",
+          "field_type": "currency",
+          "data_type": "decimal",
+          "position": {
+            "x": 480,
+            "y": 344,
+            "width": 100,
+            "height": 18,
+            "unit": "pt"
+          },
+          "style": {
+            "font_family": "Courier",
+            "font_size": 10,
+            "text_align": "right"
+          },
+          "formatting": {
+            "decimal_places": 2,
+            "show_commas": true
+          },
+          "field_value": "income.taxable_interest"
+        },
+        {
+          "field_id": "dividends_line3b",
+          "irs_line_reference": "Line 3b - Qualified dividends",
+          "field_type": "currency",
+          "data_type": "decimal",
+          "position": {
+            "x": 480,
+            "y": 368,
+            "width": 100,
+            "height": 18,
+            "unit": "pt"
+          },
+          "style": {
+            "font_family": "Courier",
+            "font_size": 10,
+            "text_align": "right"
+          },
+          "formatting": {
+            "decimal_places": 2,
+            "show_commas": true
+          },
+          "field_value": "income.qualified_dividends"
+        },
+        {
+          "field_id": "capital_gain_line7",
+          "irs_line_reference": "Line 7 - Capital gain or (loss)",
+          "field_type": "currency",
+          "data_type": "decimal",
+          "position": {
+            "x": 480,
+            "y": 464,
+            "width": 100,
+            "height": 18,
+            "unit": "pt"
+          },
+          "style": {
+            "font_family": "Courier",
+            "font_size": 10,
+            "text_align": "right"
+          },
+          "formatting": {
+            "decimal_places": 2,
+            "show_commas": true,
+            "negative_format": "parentheses"
+          },
+          "field_value": "income.capital_gain"
+        },
+        {
+          "field_id": "total_income_line9",
+          "irs_line_reference": "Line 9 - Total income",
+          "field_type": "currency",
+          "data_type": "decimal",
+          "position": {
+            "x": 480,
+            "y": 512,
+            "width": 100,
+            "height": 18,
+            "unit": "pt"
+          },
+          "style": {
+            "font_family": "Courier",
+            "font_size": 10,
+            "text_align": "right"
+          },
+          "formatting": {
+            "decimal_places": 2,
+            "show_commas": true
+          },
+          "field_value": "income.total_income"
+        },
+        {
+          "field_id": "signature_date",
+          "irs_line_reference": "Date",
+          "field_type": "date",
+          "data_type": "date",
+          "position": {
+            "x": 400,
+            "y": 720,
+            "width": 80,
+            "height": 18,
+            "unit": "pt"
+          },
+          "formatting": {
+            "date_format": "MM/DD/YYYY"
+          },
+          "field_value": "signature.date"
+        }
+      ]
+    },
+    {
+      "page_number": 2,
+      "fields": [
+        {
+          "field_id": "tax_line16",
+          "irs_line_reference": "Line 16 - Tax",
+          "field_type": "currency",
+          "data_type": "decimal",
+          "position": {
+            "x": 480,
+            "y": 100,
+            "width": 100,
+            "height": 18,
+            "unit": "pt"
+          },
+          "style": {
+            "font_family": "Courier",
+            "font_size": 10,
+            "text_align": "right"
+          },
+          "formatting": {
+            "decimal_places": 2,
+            "show_commas": true
+          },
+          "field_value": "tax.total_tax"
+        },
+        {
+          "field_id": "refund_line34",
+          "irs_line_reference": "Line 34 - Amount you overpaid",
+          "field_type": "currency",
+          "data_type": "decimal",
+          "position": {
+            "x": 480,
+            "y": 400,
+            "width": 100,
+            "height": 18,
+            "unit": "pt"
+          },
+          "style": {
+            "font_family": "Courier",
+            "font_size": 10,
+            "text_align": "right"
+          },
+          "formatting": {
+            "decimal_places": 2,
+            "show_commas": true
+          },
+          "field_value": "refund.overpaid"
+        }
+      ]
+    }
+  ],
+  "field_groups": [
+    {
+      "group_id": "filing_status",
+      "group_type": "radio",
+      "field_ids": [
+        "filing_status_single",
+        "filing_status_married_joint",
+        "filing_status_married_separate",
+        "filing_status_head_household",
+        "filing_status_widow"
+      ]
+    }
+  ]
+}
