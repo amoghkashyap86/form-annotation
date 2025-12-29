@@ -35,7 +35,6 @@
             "color": "#000000"
           },
           "validation": {
-            "required": true,
             "pattern": "^[A-Za-z\\s\\-\\']+$",
             "max_length": 30
           },
@@ -57,9 +56,6 @@
             "font_family": "Courier",
             "font_size": 10,
             "text_align": "left"
-          },
-          "validation": {
-            "required": true
           },
           "field_value": "taxpayer.last_name"
         },
@@ -88,7 +84,6 @@
             "text_align": "center"
           },
           "validation": {
-            "required": true,
             "pattern": "^\\d{3}-?\\d{2}-?\\d{4}$"
           },
           "field_value": "taxpayer.ssn"

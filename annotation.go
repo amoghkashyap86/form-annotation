@@ -107,7 +107,6 @@ type Formatting struct {
 }
 
 type Validation struct {
-	Required  bool    `json:"required,omitempty"`
 	Pattern   string  `json:"pattern,omitempty"`
 	Min       float64 `json:"min,omitempty"`
 	Max       float64 `json:"max,omitempty"`
